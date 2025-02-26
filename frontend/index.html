@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>מערכת ניטור הקלדות</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- שינוי שם הקובץ מ-style.css ל-styles.css -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="main-page">
+    <!-- הוספת כפתור התנתקות -->
+    <nav class="navbar">
+        <div class="container">
+            <button onclick="logout()" class="btn btn-danger">
+                <i class="fas fa-sign-out-alt"></i> התנתק
+            </button>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <h1 class="mb-4 text-center">
+            <i class="fas fa-shield-alt"></i> מערכת ניטור הקלדות
+        </h1>
+        
+        <div class="row mb-3 filters">
+            <div class="col-md-4">
+                <label class="form-label">סינון לפי תאריך:</label>
+                <input type="date" id="dateFilter" class="form-control">
+            </div>
+            <div class="col-md-4">
+                <label class="form-label">סינון לפי חלון:</label>
+                <select id="windowFilter" class="form-control">
+                    <option value="">כל החלונות</option>
+                </select>
+            </div>
+            <div class="col-md-4">
+                <label class="form-label">חיפוש טקסט:</label>
+                <input type="text" id="searchText" class="form-control" 
+                       placeholder="הקלד לחיפוש...">
+            </div>
+        </div>
+
+        <div id="logsContainer"></div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
