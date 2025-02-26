@@ -192,13 +192,89 @@ button:hover {
     background: rgba(0, 0, 0, 0.9);
     padding: 1rem;
     box-shadow: 0 2px 10px rgba(0, 255, 0, 0.2);
-    backdrop-filter: blur(10px);
 }
 
 .navbar .container {
     background: transparent;
     box-shadow: none;
     border: none;
+    /* הוספת ריווח */
+    padding: 0.5rem 2rem;
+}
+
+.nav-buttons-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0;
+    /* שינוי הרקע לבהיר יותר ושקוף יותר */
+    background: rgba(17, 34, 64, 0.7);
+    border-radius: 10px;
+    /* הוספת אפקט זוהר */
+    box-shadow: 
+        0 0 20px rgba(0, 255, 136, 0.3),
+        inset 0 0 20px rgba(0, 255, 136, 0.1);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(0, 255, 136, 0.3);
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.nav-btn {
+    min-width: 180px;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    text-align: center;
+    /* הגדלת האפקט הזוהר */
+    box-shadow: 0 0 15px rgba(0, 255, 136, 0.2);
+    margin: 0 1rem;
+    backdrop-filter: blur(5px);
+}
+
+.btn-info {
+    background: linear-gradient(45deg, var(--secondary-color), #4CAF50);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
+}
+
+.btn-info, .btn-danger {
+    font-weight: bold;
+    letter-spacing: 1px;
+    /* הוספת שקיפות לרקע */
+    background: rgba(0, 255, 136, 0.2);
+    border: 1px solid rgba(0, 255, 136, 0.3);
+    /* שיפור הניראות של הטקסט */
+    text-shadow: 0 0 10px rgba(0, 255, 136, 0.5);
+}
+
+.btn-info:hover, .btn-danger:hover {
+    transform: translateY(-2px);
+    /* הגדלת האפקט בhover */
+    box-shadow: 
+        0 0 20px rgba(0, 255, 136, 0.4),
+        inset 0 0 10px rgba(0, 255, 136, 0.2);
+    color: white;
+}
+
+.btn-info:hover {
+    background: linear-gradient(45deg, #4CAF50, var(--secondary-color));
+}
+
+.btn-danger {
+    background: linear-gradient(45deg, #f44336, #d32f2f);
+    color: white;
+    border: none;
+}
+
+.btn-danger:hover {
+    background: linear-gradient(45deg, #d32f2f, #f44336);
 }
 
 .filters {

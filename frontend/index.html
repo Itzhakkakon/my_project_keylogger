@@ -13,9 +13,16 @@
     <!-- הוספת כפתור התנתקות -->
     <nav class="navbar">
         <div class="container">
-            <button onclick="logout()" class="btn btn-danger">
-                <i class="fas fa-sign-out-alt"></i> התנתק
-            </button>
+            <div class="nav-buttons-container">
+                <div class="nav-buttons">
+                    <button onclick="window.location.href='computers.html'" class="btn btn-info nav-btn">
+                        <i class="fas fa-desktop"></i> חזרה למחשבים
+                    </button>
+                    <button onclick="logout()" class="btn btn-danger nav-btn">
+                        <i class="fas fa-sign-out-alt"></i> התנתק
+                    </button>
+                </div>
+            </div>
         </div>
     </nav>
 
